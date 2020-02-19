@@ -1,7 +1,11 @@
 package com.loftysys.starbites.Activities;
 
+import android.app.Activity;
+import android.app.Application;
+import android.content.ComponentCallbacks;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import com.loftysys.starbites.Activities.BaseActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +25,22 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class AccountVerification extends AppCompatActivity {
+class f extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
+
+
+    @Override
+    public void onTerminate() {
+
+        super.onTerminate();
+    }
+}
+
+public class AccountVerification extends BaseActivity {
 
     @BindView(R.id.resendEmail)
     Button resendEmail;
